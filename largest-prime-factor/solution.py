@@ -1,4 +1,4 @@
-import math
+from math import sqrt
 
 def main():
     number = 600851475143
@@ -9,7 +9,7 @@ def main():
         maxPrime = 2
         number /= 2
     
-    for i in range(3, int(math.sqrt(number)) + 1, 2):
+    for i in range(3, int(sqrt(number)) + 1, 2):
         while number % i == 0:
             maxPrime = i
             number /= i
