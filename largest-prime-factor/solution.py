@@ -3,21 +3,21 @@ from math import sqrt
 def main():
     number = 600851475143
 
-    maxPrime = -1
+    max_prime = -1
 
     while number % 2 == 0:
-        maxPrime = 2
+        max_prime = 2
         number /= 2
     
     for i in range(3, int(sqrt(number)) + 1, 2):
         while number % i == 0:
-            maxPrime = i
+            max_prime = i
             number /= i
     
     if number > 2:
-        maxPrime = number
+        max_prime = number
 
-    print(maxPrime)
+    print(max_prime)
 
 if __name__ == "__main__":
     main()
